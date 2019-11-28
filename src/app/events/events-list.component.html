@@ -1,0 +1,9 @@
+<div>
+  <h1>Upcoming Angular Events</h1>
+  <hr>
+  <div class="row">
+    <div  *ngFor = 'let event of events' class="col-md-5">
+      <app-event-thumbnail [event] = 'event' (click)='handleThumbnailClick(event.name)'></app-event-thumbnail>
+    </div>
+  </div>
+</div>
