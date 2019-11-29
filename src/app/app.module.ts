@@ -10,6 +10,8 @@ import { EventDetailsComponent } from './events/event-details/event-details.comp
 import { appRoutes } from './routes';
 import { CreateEventComponent } from './events/create-event.component';
 import { PageNotFoundComponent } from './errors/page-not-found.component';
+import { ProfileComponent } from './user/profile.component';
+
 // import { EventsListResolverService } from './events/events-list-resolver.service';
 
 // import { ToastrService } from './common/toastr.service';
