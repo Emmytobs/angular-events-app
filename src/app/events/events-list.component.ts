@@ -1,24 +1,20 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { EventService } from './shared/event.service';
-
-declare let toastr;
+import { IEvent } from './shared/index';
 
 @Component({
-  templateUrl: "./events-list.component.html",
-  styleUrls: ["./events-list.component.css"]
+  templateUrl: './events-list.component.html',
+  styleUrls: ['./events-list.component.css']
 })
 export class EventsListComponent implements OnInit {
 
-  events: any;
+  events: IEvent[];
   constructor(private eventService: EventService, private route: ActivatedRoute) {}
 
-  handleThumbnailClick(eventName) {
-    toastr.success(eventName);
-  }
-
   ngOnInit() {
-    this.events = this.route.snapshot.data['events']
+    // Get the events property from the route and assign it to the events property on the EventListComponent class
+    this.events = this.route.snapshot.data['events'];
   }
 }
